@@ -1,0 +1,535 @@
+/* ----------------------------------
+
+Name: main.css
+Version: 1.0
+
+-------------------------------------
+
+Table of contents
+        
+    01. Top Header
+    02. Navbar
+    03. Slider
+    04. About Us
+    05. Our Services
+    06. Portfolio
+    07. Some Facts
+    08. Testimonials
+    09. Our Team
+    10. Pricing
+    11. Our Blog
+    12. Contact Us
+    13. Footer
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background: #fbfaff;
+   
+}
+
+
+
+/*--------------------------------------------------
+[1. Start Top Header]
+--------------------------------------------------*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.top-header {
+    background: #212332;
+    color: #a2b2bb;
+    padding: 15px 0;
+    border-bottom: .5px solid #313347;
+    z-index: 10;
+}
+
+.top-header p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Left Links */
+.top-header .links a {
+    color: #a2b2bb;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all .5s ease-in-out;
+}
+
+.top-header .links a span {
+    margin-left: 20px;
+}
+
+.top-header .links a:hover {
+    color: #13b1c5;
+}
+
+/*--------------------------------------------------
+[1. End Top Header]
+--------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+[2. Start Navbar]
+--------------------------------------------------*/
+
+.navbar {
+    padding: 25px 0;
+    background: #212332 !important;
+}
+
+/* Navbar Brand */
+.navbar a.navbar-brand {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+/* Nav Item */
+.navbar .navbar-nav .nav-item {
+    padding: 0;
+    margin-left: 40px;
+}
+
+/* Nav Link */
+.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+
+/* Nva Link Under line */
+.navbar .navbar-nav .nav-item .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #13b1c5;
+    transition: width .4s;
+}
+
+
+/* Nva Link Under line on Hover */
+.navbar .navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+    transform: width .4s;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #13b1c5;
+}
+
+.navbar .navbar-nav .activated .nav-link::after {
+    width: 100%;
+    transform: width .4s;
+}
+
+.navbar .navbar-nav .activated .nav-link {
+    color: #13b1c5;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu {
+    margin-top: 25px;
+    background: #212332;
+}
+
+.navbar .navbar-nav .dropdown span {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a:hover {
+    background: #13b1c5;
+}
+
+/*--------------------------------------------------
+[2. End Navbar]
+--------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+[3. Start Slider]
+--------------------------------------------------*/
+
+.slider {
+    background: url('../img/bg/slider-bg.png') center center no-repeat;
+    background-size: cover;
+    height:100vh;
+    position: relative;
+}
+
+/* Slider Content */
+.slider .slider-content {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-45%)
+    
+}
+.slider .slider-content h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #13b1c5;
+    padding: 0;
+    margin: 0;
+
+}
+
+.slider .slider-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.slider .slider-content p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #cfd1e3;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+/* Buttons */
+.slider .slider-content .buttons {
+    margin-top: 40px;
+    display: block;
+}
+
+.slider .slider-content .buttons a.btn-1 {
+    background: #13b1c5;
+    color: #ffffff;
+    padding: 15px 55px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    display: inline-block;
+}
+
+.slider .slider-content .buttons a.btn-1:hover {
+    background: #ffffff;
+    color: #212332;
+}
+
+
+.slider .slider-content .buttons a.btn-2 {
+    background: #ffffff;
+    color: #212332;
+    padding: 15px 50px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+    transition: all .5s ease-in-out;
+    display: inline-block;
+}
+
+.slider .slider-content .buttons a.btn-2:hover {
+    background: #13b1c5;
+    color: #ffffff;
+}
+
+/*--------------------------------------------------
+[3. End Slider]
+--------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+
+
+/*--------------------------------------------------
+[13. Start Footer]
+--------------------------------------------------*/
+.footer .social {
+    padding: 10px 0;
+    background: #2b2e41;
+}
+
+.footer .social .icons {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #d9eaec;
+}
+
+.footer .social .icons span {
+    padding: 0 7px;
+}
+
+.footer .bottom-footer {
+    background: #212332;
+    padding: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer .bottom-footer p {
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------------------------------
+[13. End Footer]
+--------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================
+    Media Query
+====================================== */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+    /*Top-Header*/
+    .top-header {
+        display: none;
+    }
+
+    /*Navbar*/
+    .navbar {
+        padding: 30px;
+    }
+    .navbar .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .navbar .navbar-nav .nav-item .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #13b1c5;
+        transition: width .4s;
+    }
+    
+    
+    /* Nva Link Under line on Hover */
+    .navbar .navbar-nav .nav-item .nav-link:hover::after {
+        width: 0;
+        transform: width .4s;
+    }
+
+
+    /* Slider */
+    .slider {
+        height: 100vh;
+        position: relative;
+    }
+    .slider .slider-content h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #424457;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .slider .slider-content .buttons a.btn-1{
+        margin-bottom: 20px;
+    }
+
+    /* About Us */
+    .about-us .about-us-content .buttons a.btn-2 {
+        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    /* About Us */
+    .about-us .about-us-content .buttons a.btn-2 {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    /* Some Facts */
+    .some-facts .items {
+       margin: 30px 0; 
+    }
+
+    /* Our Team */
+    .our-team .box {
+        margin: 15px 0;
+    }
+
+    /* Our Team */
+    .our-price .table-content {
+        margin-bottom: 30px;
+    }
+
+    /* Our Blog */
+    .our-blog .post {
+        margin-left: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    /* Info */
+    .contact-us .info {
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    
+ }
+
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    /* Top-Header */
+    .top-header {
+        display: none;
+    }
+
+    /*Navbar*/
+    .navbar {
+        padding: 30px 30px;
+    }
+    .navbar .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .navbar .navbar-nav .nav-item .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #13b1c5;
+        transition: width .4s;
+    }
+    
+    
+    /* Nva Link Under line on Hover */
+    .navbar .navbar-nav .nav-item .nav-link:hover::after {
+        width: 0;
+    }
+
+    /* About us */
+    .about-us .about-img {
+        margin-top: 40px;
+    }
+
+    
+    /* Some Facts */
+    .some-facts .items {
+        margin: 30px 0; 
+     }
+ 
+     /* Our Team */
+     .our-team .box {
+         margin: 15px 0;
+     }
+ 
+     /* Our Team */
+     .our-price .table-content {
+         margin-bottom: 30px;
+     }
+ 
+     /* Our Blog */
+     .our-blog .post {
+         margin-bottom: 30px;
+     }
+ 
+     /* Info */
+     .contact-us .info {
+         margin-top: 50px;
+         text-align: center;
+     }
+}
+
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    
+    /*Navbar*/
+    .navbar {
+        padding: 30px 30px;
+    }
+    .navbar .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .navbar .navbar-nav .nav-item .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #13b1c5;
+        transition: width .4s;
+    }
+    
+    
+    /* Nva Link Under line on Hover */
+    .navbar .navbar-nav .nav-item .nav-link:hover::after {
+        width: 0;
+        transform: width .4s;
+    }
+
+    /* Some Facts */
+    .some-facts .items {
+        margin: 30px 0; 
+     }
+
+     /* Our Team */
+     .our-team .box .content .info .details a {
+        font-size: 13px;
+        color: #ffffff;
+        padding: 5px;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+    }
+
+    /* Our Blog */
+    .our-blog .post {
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
