@@ -64,7 +64,7 @@ menguntungkan (cost).
                 </p>
 
                 <div class="buttons">
-                    <a href="index.php/welcome/dashboard" class="btn-1">Get Started</a>
+                    <a href="<?php echo base_url() ?>welcome/dashboard" class="btn-1">Get Started</a>
                  
                 </div>
 
