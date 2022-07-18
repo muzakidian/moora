@@ -13,10 +13,11 @@
         <ul class="nav">
           <li class="nav-item nav-category">Menu Dashboard</li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
+            <a href="<?php echo base_url() ?>welcome/kriteria" class="nav-link">
               <i class="link-icon" data-feather="inbox"></i>
               <span class="link-title">Data Kriteria</span>
-            </a>           
+            </a>
+          </li>
          
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms">

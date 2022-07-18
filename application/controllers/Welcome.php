@@ -25,17 +25,24 @@ class Welcome extends CI_Controller {
 	}
 	public function dashboard()
 	{
-		$this->load->view('/header/header');
-		$this->load->view('/sidebar/sidebar');
-		$this->load->view('dashboard');
-		$this->load->view('/footer/footer');
+		$this->load->view('header/header');
+		$this->load->view('sidebar/sidebar');
+		$this->load->view('dashboard/dashboard');
+		$this->load->view('footer/footer');
 
 	}
 
 	public function dashboard2()
 	{
-		$this->load->view('/header/header');
-		$this->load->view('dashboard2');
-		$this->load->view('/footer/footer');
+		$this->load->view('header/header');
+		$this->load->view('dashboard/dashboard2');
+		$this->load->view('footer/footer');
+	}
+	public function kriteria()
+	{
+		$this->load->view('header/header');
+		$this->load->view('kriteria');
+		$this->load->view('footer/footer');
+
 	}
 }
