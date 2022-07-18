@@ -27,4 +27,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('dashboard');
 	}
+
+	public function dashboard2()
+	{
+		$this->load->view('dashboard2');
+	}
 }

@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/flag-icon-css/css/flag-icon.min.css">
 	<!-- endinject -->
   <!-- Layout styles -->  
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/demo_1/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/demo_2/style.css">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/favicon.png" />
 </head>
@@ -66,28 +66,13 @@
         <a href="#" class="settings-sidebar-toggler">
           <i data-feather="settings"></i>
         </a>
-        <h6 class="text-muted">Sidebar:</h6>
-        <div class="form-group border-bottom">
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight" value="sidebar-light" >
-              Light
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark" value="sidebar-dark" checked>
-              Dark
-            </label>
-          </div>
-        </div>
         <div class="theme-wrapper">
           <h6 class="text-muted mb-2">Light Theme:</h6>
-          <a class="theme-item active" href="<?php echo base_url() ?>welcome/dashboard">
+          <a class="theme-item" href="<?php echo base_url() ?>welcome/dashboard">
             <img src="../assets/images/screenshots/light.jpg" alt="light theme">
           </a>
           <h6 class="text-muted mb-2">Dark Theme:</h6>
-          <a class="theme-item" href="<?php echo base_url() ?>welcome/dashboard2">
+          <a class="theme-item active" href="<?php echo base_url() ?>welcome/dashboard2">
             <img src="../assets/images/screenshots/dark.jpg" alt="light theme">
           </a>
         </div>
@@ -362,39 +347,9 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12 col-xl-12 stretch-card">
-            <div class="row flex-grow">
-              <div class="col-md-4 grid-margin stretch-card">
-              </div>
-            </div>
-          </div>
-        </div> <!-- row -->
 
-        <div class="row">
-          <div class="col-12 col-xl-12 grid-margin stretch-card">
-            <div class="card overflow-hidden">
-            </div>
-          </div>
-        </div> <!-- row -->
 
-        <div class="row">
-          <div class="col-lg-7 col-xl-8 grid-margin stretch-card">
-            <div class="card">
-            </div>
-          </div>
-          <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
-          </div>
-        </div> <!-- row -->
 
-        <div class="row">
-          <div class="col-lg-5 col-xl-4 grid-margin grid-margin-xl-0 stretch-card">
-            <div class="card"> 
-            </div>
-          </div>
-          <div class="col-lg-7 col-xl-8 stretch-card">            
-          </div>
-        </div> <!-- row -->
 
 			</div>
 
