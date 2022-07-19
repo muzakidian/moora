@@ -19,4 +19,23 @@ class Mymodel extends CI_Model
 
         $this->db->insert('tab_kriteria', $data);
     }
+
+    //EDIT DATA
+    // public function ambil_data_kriteria()
+    // {
+    //     return $this->db->get_where('tab_kriteria')->result_array();
+    // }
+
+    //PROSES EDIT DATA
+    // public function proses_edit_dataKriteria()
+    // {
+    //     $data = [
+    //         "nama_kriteria" => $this->input->post('nama_kriteria'),
+    //         "type" => $this->input->post('type'),
+    //         "bobot" => $this->input->post('bobot'),
+    //     ];
+
+    //     $this->db->where('id', $this->input->post('id'));
+    //     $this->db->update('kriteria', $data);
+    // }
 }
