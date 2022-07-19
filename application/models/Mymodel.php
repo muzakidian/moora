@@ -38,4 +38,10 @@ class Mymodel extends CI_Model
     //     $this->db->where('id', $this->input->post('id'));
     //     $this->db->update('kriteria', $data);
     // }
+
+    public function hapus_data($id_kriteria)
+    {
+        $this->db->where('id_kriteria',$id_kriteria);
+        $this->db->delete('tab_kriteria');
+    }
 }
