@@ -41,6 +41,7 @@ class Welcome extends CI_Controller {
 	public function kriteria()
 	{
 		$this->load->view('header/header');
+		$this->load->view('sidebar/sidebar');
 		$this->load->view('kriteria');
 		$this->load->view('footer/footer');
 
