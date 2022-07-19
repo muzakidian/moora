@@ -76,6 +76,12 @@ class Welcome extends CI_Controller {
 
 	}
 
+	public function hapus_data($id_kriteria)
+	{
+		$this->Mymodel->hapus_data($id_kriteria);
+		redirect('welcome/kriteria');
+	}
+
 	//EDIT DATA
 	// public function edit_dataKriteria()
 	// {
