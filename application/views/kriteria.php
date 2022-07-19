@@ -1,44 +1,62 @@
 <body class="sidebar-dark">
-	<div class="main-wrapper">
+    <div class="main-wrapper">
 
-		<!-- partial:partials/_sidebar.html -->
+        <!-- partial:partials/_sidebar.html -->
 
-		<!-- partial -->
-	
-		<div class="page-wrapper">	
-			<!-- partial:partials/_navbar.html -->
+        <!-- partial -->
 
-			<!-- partial -->
+        <div class="page-wrapper">
+            <!-- partial:partials/_navbar.html -->
 
-			<div class="page-content">
+            <!-- partial -->
 
-        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-          <div>
-            <h4 class="mb-3 mb-md-0">Data Kriteria</h4>
-          </div>
-          <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <div class="input-group date datepicker dashboard-date mr-2 mb-2 mb-md-0 d-md-none d-xl-flex" id="dashboardDate">
-              <span class="input-group-addon bg-transparent"><i data-feather="calendar" class=" text-primary"></i></span>
-              <input type="text" class="form-control">
+            <div class="page-content">
+
+                <nav class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Table</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col-md-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Data Table</h6>
+                                <a href="<?php echo base_url('welcome/tambah_data') ?>" class="btn btn-primary btn-sm float-right"> Tambah Data</a>
+                                <p class="card-description">Read the <a href="https://datatables.net/" target="_blank"> Official DataTables Documentation </a>for a full list of instructions and other options.</p>
+                                <div class="table-responsive">
+                                    <table id="dataTableExample" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Nama</th>
+                                                <th>Tipe</th>
+                                                <th>Bobot</th>
+                                                <th colspan="2">Setting</th>
+                                            </tr>
+                                            <?php
+                                            $id = 1;
+                                            foreach ($tab_kriteria as $krit) : ?>
+                                                <tr>
+                                                    <td><?php echo $id++; ?></td>
+                                                    <td><?php echo $krit['nama_kriteria']; ?></td>
+                                                    <td><?php echo $krit['type']; ?></td>
+                                                    <td><?php echo $krit['bobot']; ?></td>
+                                                    <td>
+                                                        <a href="#" class="badge badge-primary">Edit</a>
+                                                        <a href="#" class="badge badge-primary">Hapus</a>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="button" class="btn btn-outline-info btn-icon-text mr-2 d-none d-md-block">
-              <i class="btn-icon-prepend" data-feather="download"></i>
-              Import
-            </button>
-            <button type="button" class="btn btn-outline-primary btn-icon-text mr-2 mb-2 mb-md-0">
-              <i class="btn-icon-prepend" data-feather="printer"></i>
-              Print
-            </button>
-            <button type="button" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
-              <i class="btn-icon-prepend" data-feather="download-cloud"></i>
-              Download Report
-            </button>
-          </div>
         </div>
-			</div>
-
-			<!-- partial:partials/_footer.html -->
-
-			<!-- partial -->		
-		</div>
-	</div>
+    </div>

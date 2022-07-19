@@ -40,10 +40,24 @@ class Welcome extends CI_Controller {
 	}
 	public function kriteria()
 	{
+		$data['tab_kriteria'] = $this->Mymodel->GetData();
 		$this->load->view('header/header');
 		$this->load->view('sidebar/sidebar');
-		$this->load->view('kriteria');
+		$this->load->view('kriteria' ,$data);
 		$this->load->view('footer/footer');
 
+	}
+	public function tambah_data()
+	{
+		$data['tab_kriteria'] = $this->Mymodel->GetData();
+		$this->load->view('header/header');
+		$this->load->view('sidebar/sidebar');
+		$this->load->view('tambah_data' ,$data);
+		$this->load->view('footer/footer');
+	}
+	public function proses_tambah_data()
+	{
+		$this->Mymodel->proses_tambah();
+		redirect('welcome/kriteria');
 	}
 }

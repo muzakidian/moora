@@ -15,9 +15,17 @@
 <!-- end plugin js for this page -->
 <!-- inject:js -->
 <script src="<?php echo base_url() ?>assets/vendors/feather-icons/feather.min.js"></script>
-<script src="<?php echo base_url() ?>assets/js/template.js"></script>
 <!-- endinject -->
 <!-- custom js for this page -->
 <script src="<?php echo base_url() ?>assets/js/dashboard.js"></script>
 <script src="<?php echo base_url() ?>assets/js/datepicker.js"></script>
 <!-- end custom js for this page -->
+<script src="<?php echo base_url() ?>assets/vendors/core/core.js"></script>
+<!-- plugin js for this page -->
+<script src="<?php echo base_url() ?>assets/vendors/datatables.net/jquery.dataTables.js"></script>
+<script src="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+<!-- end plugin js for this page -->
+<script src="<?php echo base_url() ?>assets/js/template.js"></script>
+<!-- endinject -->
+<!-- custom js for this page -->
+<script src="<?php echo base_url() ?>assets/js/data-table.js"></script>
