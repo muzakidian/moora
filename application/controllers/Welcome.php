@@ -57,8 +57,15 @@ class Welcome extends CI_Controller {
 	}
 	public function proses_tambah_data()
 	{
-		$this->Mymodel->proses_tambah();
-		redirect('welcome/kriteria');
+		$this->form_validation->set_rules('nama_kriteria','Nama Kriteria','required');
+		if ($this->form_validation->run() == false) {
+			redirect('welcome/tambah_data');
+		}
+		else {
+			$this->Mymodel->proses_tambah();
+			redirect('welcome/kriteria');
+		}
+
 	}
 
 	//EDIT DATA
