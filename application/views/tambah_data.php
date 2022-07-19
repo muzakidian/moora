@@ -7,6 +7,7 @@
 
 
             <div class="page-content">
+                <?php echo validation_errors();?>
                 <form method="post" action="<?php echo base_url('welcome/proses_tambah_data') ?>">
                     <div class="form-group row">
                         <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>

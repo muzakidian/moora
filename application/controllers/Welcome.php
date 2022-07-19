@@ -57,9 +57,17 @@ class Welcome extends CI_Controller {
 	}
 	public function proses_tambah_data()
 	{
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
 		$this->form_validation->set_rules('nama_kriteria','Nama Kriteria','required');
-		if ($this->form_validation->run() == false) {
-			redirect('welcome/tambah_data');
+		$this->form_validation->set_rules('type','Nama Kriteria','required');
+		$this->form_validation->set_rules('bobot','Nama Kriteria','required');
+		if ($this->form_validation->run() == FALSE) {
+			$data['tab_kriteria'] = $this->Mymodel->GetData();
+			$this->load->view('header/header');
+			$this->load->view('sidebar/sidebar');
+			$this->load->view('tambah_data' ,$data);
+			$this->load->view('footer/footer');
 		}
 		else {
 			$this->Mymodel->proses_tambah();
