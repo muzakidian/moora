@@ -20,14 +20,18 @@ class Mymodel extends CI_Model
         $this->db->insert('tab_kriteria', $data);
     }
 
-    //EDIT DATA
-    // public function ambil_data_kriteria()
+    public function hapus_data($id_kriteria)
+    {
+        $this->db->where('id_kriteria',$id_kriteria);
+        $this->db->delete('tab_kriteria');
+    }
+
+    // public function ambil_id_kriteria($id_kriteria)
     // {
-    //     return $this->db->get_where('tab_kriteria')->result_array();
+    //     return $this->db->get_where('tab_kriteria',['id_kriteria' => $id_kriteria])->result_array();
     // }
 
-    //PROSES EDIT DATA
-    // public function proses_edit_dataKriteria()
+    // public function proses_edit_data()
     // {
     //     $data = [
     //         "nama_kriteria" => $this->input->post('nama_kriteria'),
@@ -35,13 +39,7 @@ class Mymodel extends CI_Model
     //         "bobot" => $this->input->post('bobot'),
     //     ];
 
-    //     $this->db->where('id', $this->input->post('id'));
-    //     $this->db->update('kriteria', $data);
+    //     $this->db->where('id_kriteria', $this->input->post('id_kriteria'));
+    //     $this->db->update('tab_kriteria', $data);
     // }
-
-    public function hapus_data($id_kriteria)
-    {
-        $this->db->where('id_kriteria',$id_kriteria);
-        $this->db->delete('tab_kriteria');
-    }
 }
