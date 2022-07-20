@@ -38,49 +38,49 @@ class Welcome extends CI_Controller {
 		$this->load->view('dashboard/dashboard2');
 		$this->load->view('footer/footer');
 	}
-	public function kriteria()
-	{
-		$data['tab_kriteria'] = $this->Mymodel->GetData();
-		$this->load->view('header/header');
-		$this->load->view('sidebar/sidebar');
-		$this->load->view('kriteria' ,$data);
-		$this->load->view('footer/footer');
+	// public function kriteria()
+	// {
+	// 	$data['tab_kriteria'] = $this->Mymodel->GetData();
+	// 	$this->load->view('header/header');
+	// 	$this->load->view('sidebar/sidebar');
+	// 	$this->load->view('kriteria/kriteria' ,$data);
+	// 	$this->load->view('footer/footer');
 
-	}
-	public function tambah_data()
-	{
-		$data['tab_kriteria'] = $this->Mymodel->GetData();
-		$this->load->view('header/header');
-		$this->load->view('sidebar/sidebar');
-		$this->load->view('tambah_data' ,$data);
-		$this->load->view('footer/footer');
-	}
-	public function proses_tambah_data()
-	{
-		$this->load->helper(array('form', 'url'));
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('nama_kriteria','Nama Kriteria','required');
-		$this->form_validation->set_rules('type','Type','required');
-		$this->form_validation->set_rules('bobot','Bobot','required');
-		if ($this->form_validation->run() == FALSE) {
-			$data['tab_kriteria'] = $this->Mymodel->GetData();
-			$this->load->view('header/header');
-			$this->load->view('sidebar/sidebar');
-			$this->load->view('tambah_data' ,$data);
-			$this->load->view('footer/footer');
-		}
-		else {
-			$this->Mymodel->proses_tambah();
-			redirect('welcome/kriteria');
-		}
+	// }
+	// public function tambah_data()
+	// {
+	// 	$data['tab_kriteria'] = $this->Mymodel->GetData();
+	// 	$this->load->view('header/header');
+	// 	$this->load->view('sidebar/sidebar');
+	// 	$this->load->view('kriteria/tambah_data' ,$data);
+	// 	$this->load->view('footer/footer');
+	// }
+	// public function proses_tambah_data()
+	// {
+	// 	$this->load->helper(array('form', 'url'));
+	// 	$this->load->library('form_validation');
+	// 	$this->form_validation->set_rules('nama_kriteria','Nama Kriteria','required');
+	// 	$this->form_validation->set_rules('type','Type','required');
+	// 	$this->form_validation->set_rules('bobot','Bobot','required');
+	// 	if ($this->form_validation->run() == FALSE) {
+	// 		$data['tab_kriteria'] = $this->Mymodel->GetData();
+	// 		$this->load->view('header/header');
+	// 		$this->load->view('sidebar/sidebar');
+	// 		$this->load->view('kriteria/tambah_data' ,$data);
+	// 		$this->load->view('footer/footer');
+	// 	}
+	// 	else {
+	// 		$this->Mymodel->proses_tambah();
+	// 		redirect('kriteria/kriteria');
+	// 	}
 
-	}
+	// }
 
-	public function hapus_data($id_kriteria)
-	{
-		$this->Mymodel->hapus_data($id_kriteria);
-		redirect('welcome/kriteria');
-	}
+	// public function hapus_data($id_kriteria)
+	// {
+	// 	$this->Mymodel->hapus_data($id_kriteria);
+	// 	redirect('kriteria/kriteria');
+	// }
 
 	//EDIT DATA
 	// public function edit_dataKriteria()
@@ -96,6 +96,6 @@ class Welcome extends CI_Controller {
 	// public function proses_edit_dataKriteria()
 	// {
 	// 	$this->Mymodel->proses_edit_dataKriteria();
-	// 	redirect('welcome/kriteria');
+	// 	redirect('kriteria/kriteria');
 	// }
 }
