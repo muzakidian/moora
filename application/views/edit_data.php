@@ -4,16 +4,10 @@
         <div class="page-wrapper">
 
             <div class="page-content">
-<<<<<<< HEAD:application/views/edit_data.php
                 <?php echo validation_errors(); ?>
                 <form method="post" action="<?php echo base_url('welcome/proses_edit_data') ?>">
                   
                 <input type="hidden" name="tab_kriteria" value="<?php echo $tab_kriteria['id_kriteria'];?>">
-=======
-                <form method="post" action="<?php echo base_url('kriteria/proses_edit_dataKriteria') ?>">
-                
-                <input type="hidden" name="id" value="<?php echo $kriteria['id'];?>"> 
->>>>>>> eabddbb6ccc2c2dfe14ea69737b8c7dc99ce8542:application/views/kriteria/edit_dataKriteria.php
 
                 <div class="form-group row">
                         <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>

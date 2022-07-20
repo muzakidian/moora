@@ -7,13 +7,8 @@
 
 
             <div class="page-content">
-<<<<<<< HEAD:application/views/kriteria/tambah_data.php
                 <?php echo validation_errors();?>
                 <form method="post" action="<?php echo base_url('kriteria/proses_tambah_data') ?>">
-=======
-                <?php echo validation_errors(); ?>
-                <form method="post" action="<?php echo base_url('welcome/proses_tambah_data') ?>">
->>>>>>> efeba96869ce1fff369b105f453167a2a9f76094:application/views/tambah_data.php
                     <div class="form-group row">
                         <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>
                         <div class="col-sm-5">

@@ -47,13 +47,8 @@
                                                     <td><?php echo $krit['type']; ?></td>
                                                     <td><?php echo $krit['bobot']; ?></td>
                                                     <td>
-<<<<<<< HEAD:application/views/kriteria.php
-                                                        <a href="<?php echo base_url() ?>Welcome/edit_data/<?php echo $krit['id_kriteria']; ?>" class="badge badge-warning"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
-                                                        <a href="<?php echo base_url() ?>Welcome/hapus_data/<?php echo $krit['id_kriteria']; ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
-=======
-                                                        <a href="#" class="badge badge-primary">Edit</a>
-                                                        <a href="<?php echo base_url() ?>kriteria/hapus_data<?php echo $krit['id_kriteria'] ?>" class="badge badge-primary">Hapus</a>
->>>>>>> eabddbb6ccc2c2dfe14ea69737b8c7dc99ce8542:application/views/kriteria/kriteria.php
+                                                        <a href="<?php echo base_url() ?>kriteria/edit_data/<?php echo $krit['id_kriteria']; ?>" class="badge badge-primary"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
+                                                        <a href="<?php echo base_url() ?>kriteria/hapus_data/<?php echo $krit['id_kriteria']; ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>

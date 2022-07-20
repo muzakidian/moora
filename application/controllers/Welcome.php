@@ -93,12 +93,7 @@ class Welcome extends CI_Controller {
 	
 	// public function proses_edit_data($id_kriteria)
 	// {
-<<<<<<< HEAD
 	// 	$this->Mymodel->proses_edit_data($id_kriteria);
 	// 	redirect('welcome/kriteria');
-=======
-	// 	$this->Mymodel->proses_edit_dataKriteria();
-	// 	redirect('kriteria/kriteria');
->>>>>>> eabddbb6ccc2c2dfe14ea69737b8c7dc99ce8542
 	// }
 }
