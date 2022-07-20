@@ -1,12 +1,13 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Mymodel extends CI_Model 
+class Mymodel extends CI_Model
 {
     public function GetData()
     {
         return $this->db->get('tab_kriteria')->result_array();
     }
+
 
     public function proses_tambah()
     {
@@ -22,7 +23,7 @@ class Mymodel extends CI_Model
 
     public function hapus_data($id_kriteria)
     {
-        $this->db->where('id_kriteria',$id_kriteria);
+        $this->db->where('id_kriteria', $id_kriteria);
         $this->db->delete('tab_kriteria');
     }
 
@@ -42,4 +43,26 @@ class Mymodel extends CI_Model
     //     $this->db->where('id_kriteria', $this->input->post('id_kriteria'));
     //     $this->db->update('tab_kriteria', $data);
     // }
+
+
+    // ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF 
+
+    public function GetDataAlt()
+    {
+        return $this->db->get('tab_alternatif')->result_array();
+    }
+    public function proses_tambah_alt()
+    {
+        $data = [
+            "nama_alternatif" => $this->input->post('nama_alternatif')
+        ];
+
+        $this->db->insert('tab_alternatif', $data);
+    }
+
+    public function hapus_data_alt($id_alternatif)
+    {
+        $this->db->where('id_alternatif', $id_alternatif);
+        $this->db->delete('tab_alternatif');
+    }
 }

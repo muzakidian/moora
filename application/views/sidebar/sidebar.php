@@ -20,7 +20,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="<?php echo base_url() ?>alternatif/alternatif" class="nav-link">
+        <a href="<?php echo base_url() ?>kriteria/alternatif" class="nav-link">
           <i class="link-icon" data-feather="inbox"></i>
           <span class="link-title">Data Alternatif</span>
         </a>
