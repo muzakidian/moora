@@ -34,7 +34,7 @@
                                                 <th>Nama</th>
                                                 <th>Tipe</th>
                                                 <th>Bobot</th>
-                                                <th colspan="2">Setting</th>
+                                                <th>Setting</th>
                                             </tr>
                                         </thead>
                                         <tbody>

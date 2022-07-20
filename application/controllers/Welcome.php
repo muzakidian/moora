@@ -60,8 +60,8 @@ class Welcome extends CI_Controller {
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('nama_kriteria','Nama Kriteria','required');
-		$this->form_validation->set_rules('type','Nama Kriteria','required');
-		$this->form_validation->set_rules('bobot','Nama Kriteria','required');
+		$this->form_validation->set_rules('type','Type','required');
+		$this->form_validation->set_rules('bobot','Bobot','required');
 		if ($this->form_validation->run() == FALSE) {
 			$data['tab_kriteria'] = $this->Mymodel->GetData();
 			$this->load->view('header/header');
