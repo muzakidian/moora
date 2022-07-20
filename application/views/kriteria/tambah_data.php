@@ -1,25 +1,23 @@
 <body class="sidebar-dark">
     <div class="main-wrapper">
 
+
+
         <div class="page-wrapper">
 
-            <div class="page-content">
-<<<<<<< HEAD:application/views/edit_data.php
-                <?php echo validation_errors(); ?>
-                <form method="post" action="<?php echo base_url('welcome/proses_edit_data') ?>">
-                  
-                <input type="hidden" name="tab_kriteria" value="<?php echo $tab_kriteria['id_kriteria'];?>">
-=======
-                <form method="post" action="<?php echo base_url('kriteria/proses_edit_dataKriteria') ?>">
-                
-                <input type="hidden" name="id" value="<?php echo $kriteria['id'];?>"> 
->>>>>>> eabddbb6ccc2c2dfe14ea69737b8c7dc99ce8542:application/views/kriteria/edit_dataKriteria.php
 
-                <div class="form-group row">
+            <div class="page-content">
+<<<<<<< HEAD:application/views/kriteria/tambah_data.php
+                <?php echo validation_errors();?>
+                <form method="post" action="<?php echo base_url('kriteria/proses_tambah_data') ?>">
+=======
+                <?php echo validation_errors(); ?>
+                <form method="post" action="<?php echo base_url('welcome/proses_tambah_data') ?>">
+>>>>>>> efeba96869ce1fff369b105f453167a2a9f76094:application/views/tambah_data.php
+                    <div class="form-group row">
                         <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nama_kriteria" 
-                            required="" value="<?php echo $tab_kriteria['nama_kriteria'];?>">
+                            <input type="text" class="form-control" name="nama_kriteria" placeholder="Masukkan Kriteria...">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -29,21 +27,19 @@
                                 <option selected>Pilih Tipe</option>
                                 <option value="cost">Cost</option>
                                 <option value="benefit">Benefit</option>
-                                <required="" value="<?php echo $tab_kriteria['type'];?>">
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="bobot" class="col-sm-2 col-form-label">Bobot</label>
                         <div class="col-sm-5">
-                            <input type="number" class="form-control" name="bobot" 
-                            required="" value="<?php echo $tab_kriteria['bobot'];?>">>
+                            <input type="number" class="form-control" name="bobot" placeholder="Masukkan Bobot...">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="tambah" class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-5">
-                            <button type="submit" class="btn btn-warning">Edit</button>
+                            <button type="submit" class="btn btn-primary">Tambah</button>
                             <button type="reset" class="btn btn-danger">Reset</button>
                         </div>
                     </div>
