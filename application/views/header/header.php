@@ -28,6 +28,7 @@
 	<!-- End layout styles -->
 	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/favicon.png" />
 
+
 </head>
 <nav class="navbar">
 	<a href="#" class="sidebar-toggler">
