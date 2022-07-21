@@ -7,7 +7,7 @@
 
 
             <div class="page-content">
-                <?php echo validation_errors();?>
+                <?php echo validation_errors(); ?>
                 <form method="post" action="<?php echo base_url('kriteria/proses_tambah_data') ?>">
                     <div class="form-group row">
                         <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>
@@ -19,7 +19,7 @@
                         <label for="type" class="col-sm-2 col-form-label">Type</label>
                         <div class="col-sm-5">
                             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="type">
-                                <option selected>Pilih Tipe</option>
+                                <option value="" selected hidden>Pilih Tipe</option>
                                 <option value="cost">Cost</option>
                                 <option value="benefit">Benefit</option>
                             </select>

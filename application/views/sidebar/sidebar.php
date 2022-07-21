@@ -22,14 +22,14 @@
           </li>
 
           <li class="nav-item">
-            <a href="<?php echo base_url() ?>kriteria/alternatif" class="nav-link">
-              <i class="link-icon" data-feather="inbox"></i>
+            <a href="<?php echo base_url() ?>alternatif/alternatif" class="nav-link">
+              <i class="link-icon" data-feather="hard-drive"></i>
               <span class="link-title">Data Alternatif</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
-              <i class="link-icon" data-feather="layout"></i>
+              <i class="link-icon" data-feather="database"></i>
               <span class="link-title">Tabel Poin</span>
             </a>
           </li>

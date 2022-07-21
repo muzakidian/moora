@@ -8,7 +8,7 @@
 
             <div class="page-content">
                 <?php echo validation_errors();?>
-                <form method="post" action="<?php echo base_url('kriteria/proses_tambah_data_alt') ?>">
+                <form method="post" action="<?php echo base_url('alternatif/proses_tambah_data_alt') ?>">
                     <div class="form-group row">
                         <label for="nama_alternatif" class="col-sm-2 col-form-label">Nama Alternatif</label>
                         <div class="col-sm-5">
