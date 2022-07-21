@@ -27,6 +27,12 @@
               <span class="link-title">Data Alternatif</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
+              <i class="link-icon" data-feather="layout"></i>
+              <span class="link-title">Tabel Poin</span>
+            </a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
