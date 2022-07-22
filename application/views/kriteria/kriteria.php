@@ -31,9 +31,9 @@
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
-                                                <th>Nama Alternatif</th>
-                                                <th>Nama Kriteria</th>
-                                                <th>Poin</th>
+                                                <th>Nama kriteria</th>
+                                                <th>Type</th>
+                                                <th>Bobot</th>
                                                 <th>Setting</th>
                                             </tr>
                                         </thead>
@@ -43,12 +43,12 @@
                                             foreach ($tab_kriteria as $krit) : ?>
                                                 <tr>
                                                     <td><?php echo $id++; ?></td>
-                                                    <td><?php echo $krit['nama_kriteria']; ?></td>
-                                                    <td><?php echo $krit['type']; ?></td>
-                                                    <td><?php echo $krit['bobot']; ?></td>
+                                                    <td><?php echo $krit->nama_kriteria; ?></td>
+                                                    <td><?php echo $krit->type; ?></td>
+                                                    <td><?php echo $krit->bobot; ?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url() ?>kriteria/edit_data/<?php echo $krit['id_kriteria']; ?>" class="badge badge-primary"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
-                                                        <a href="<?php echo base_url() ?>kriteria/hapus_data/<?php echo $krit['id_kriteria']; ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
+                                                        <a href="<?php echo base_url() ?>kriteria/edit_data/<?php echo $krit->id_kriteria;  ?>" class="badge badge-primary"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
+                                                        <a href="<?php echo base_url() ?>kriteria/hapus_data/<?php echo $krit->id_kriteria;  ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
