@@ -27,22 +27,22 @@ class Mymodel extends CI_Model
         $this->db->delete('tab_kriteria');
     }
 
-    // public function ambil_id_kriteria($id_kriteria)
-    // {
-    //     return $this->db->get_where('tab_kriteria',['id_kriteria' => $id_kriteria])->result_array();
-    // }
+    public function ambil_id_kriteria($id_kriteria)
+    {
+        return $this->db->get_where('tab_kriteria',['id_kriteria' => $id_kriteria])->result_array();
+    }
 
-    // public function proses_edit_data()
-    // {
-    //     $data = [
-    //         "nama_kriteria" => $this->input->post('nama_kriteria'),
-    //         "type" => $this->input->post('type'),
-    //         "bobot" => $this->input->post('bobot'),
-    //     ];
+    public function proses_edit_data()
+    {
+        $data = [
+            "nama_kriteria" => $this->input->post('nama_kriteria'),
+            "type" => $this->input->post('type'),
+            "bobot" => $this->input->post('bobot'),
+        ];
 
-    //     $this->db->where('id_kriteria', $this->input->post('id_kriteria'));
-    //     $this->db->update('tab_kriteria', $data);
-    // }
+        $this->db->where('id_kriteria', $this->input->post('id_kriteria'));
+        $this->db->update('tab_kriteria', $data);
+    }
 
 
     // ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF 
@@ -67,10 +67,6 @@ class Mymodel extends CI_Model
     }
 
     // POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN 
-    public function GetDataPoin()
-    {
-        return $this->db->get('tab_poin')->result_array();
-    }
     public function proses_tambah_poin()
     {
         $data = [
@@ -81,26 +77,38 @@ class Mymodel extends CI_Model
 
         $this->db->insert('tab_poin', $data);
     }
-    public function hapus_data_poin($id_poin)
+    public function hapus_data_poin($id_point)
     {
-        $this->db->where('id_poin', $id_poin);
+        $this->db->where('id_point', $id_point);
         $this->db->delete('tab_poin');
     }
 
-    public function AmbilPoin()
+    // public function AmbilPoin()
+    // {
+    //     $this->db->select('tab_alternatif.nama_alternatif, tab_kriteria.nama_kriteria, tab_poin.poin ');
+    //     $this->db->from('tab_poin');
+    //     $this->db->join('tab_alternatif', 'tab_alternatif.id_alternatif = tab_poin.id_alternatif');
+    //     $this->db->join('tab_kriteria', 'tab_kriteria.id_kriteria = tab_poin.id_kriteria');
+    //     $query = $this->db->get();
+    //     if($query->num_rows() != 0)
+    //     {
+    //         return $query->result_array();
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
+
+    public function GetDataPoin()
     {
-        $this->db->select('tab_alternatif.nama_alternatif, tab_kriteria.nama_kriteria, tab_poin.poin ');
-        $this->db->from('tab_poin');
-        $this->db->join('tab_alternatif', 'tab_alternatif.id_alternatif = tab_poin.id_alternatif');
-        $this->db->join('tab_kriteria', 'tab_kriteria.id_kriteria = tab_poin.id_kriteria');
-        $query = $this->db->get();
-        if($query->num_rows() != 0)
-        {
-            return $query->result_array();
-        }
-        else
-        {
-            return false;
-        }
+        $this->db->select ( 'tab_alternatif.nama_alternatif, tab_kriteria.nama_kriteria, tab_poin.poin ,tab_poin.id_point ' ); 
+        $this->db->from ( 'tab_poin' );
+        $this->db->join ( 'tab_alternatif', 'tab_poin.id_alternatif = tab_alternatif.id_alternatif' , 'left' );
+        $this->db->join ( 'tab_kriteria', 'tab_poin.id_kriteria = tab_kriteria.id_kriteria' , 'left' );
+        $query = $this->db->get ();
+        
+        return $query->result ();
+
     }
 }

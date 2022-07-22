@@ -43,12 +43,12 @@
                                             foreach ($tab_poin as $poin) : ?>
                                                 <tr>
                                                     <td><?php echo $id++; ?></td>
-                                                    <td><?php echo $poin['id_alternatif']; ?></td>
-                                                    <td><?php echo $poin['id_kriteria']; ?></td>
-                                                    <td><?php echo $poin['poin']; ?></td>
+                                                    <td><?php echo $poin->nama_alternatif ?></td>
+                                                    <td><?php echo $poin->nama_kriteria ?></td>
+                                                    <td><?php echo $poin->poin ?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url() ?>poin/edit_data_poin/<?php echo $poin['id_point']; ?>" class="badge badge-primary"> <i data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
-                                                        <a href="<?php echo base_url() ?>poin/hapus_data_poin/<?php echo $poin['id_point']; ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
+                                                        <a href="<?php echo base_url() ?>poin/edit_data_poin/<?php echo $poin->id_point ?>" class="badge badge-primary"> <i data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
+                                                        <a href="<?php echo base_url() ?>poin/hapus_data_poin/<?php echo $poin->id_point ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>

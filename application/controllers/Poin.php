@@ -10,6 +10,8 @@ class Poin extends CI_Controller
         $this->load->view('sidebar/sidebar');
         $this->load->view('poin/poin', $dataPoin);
         $this->load->view('footer/footer');
+
+
     }
 
     public function tambah_data_poin()
@@ -42,4 +44,6 @@ class Poin extends CI_Controller
         $this->Mymodel->hapus_data_poin($id_point);
         redirect('poin/poin');
     }
+
+    
 }

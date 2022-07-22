@@ -45,21 +45,21 @@ class Kriteria extends CI_Controller
     }
 
     //EDIT DATA
-    // public function edit_dataKriteria()
-    // {
-    // 	$data['tab_kriteria'] = $this->Mymodel->ambil_data_kriteria();
-    // 	$this->load->view('header/header');
-    // 	$this->load->view('sidebar/sidebar');
-    // 	$this->load->view('edit_dataKriteria' ,$data);
-    // 	$this->load->view('footer/footer');
-    // }
+    public function edit_dataKriteria()
+    {
+    	$data['tab_kriteria'] = $this->Mymodel->ambil_data_kriteria();
+    	$this->load->view('header/header');
+    	$this->load->view('sidebar/sidebar');
+    	$this->load->view('edit_dataKriteria' ,$data);
+    	$this->load->view('footer/footer');
+    }
 
     //PROSES EDIT
-    // public function proses_edit_dataKriteria()
-    // {
-    // 	$this->Mymodel->proses_edit_dataKriteria();
-    // 	redirect('kriteria/kriteria');
-    // }
+    public function proses_edit_dataKriteria()
+    {
+    	$this->Mymodel->proses_edit_dataKriteria();
+    	redirect('kriteria/kriteria');
+    }
 
     // ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF ALTERNATIF 
 
