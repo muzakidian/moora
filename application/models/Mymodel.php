@@ -65,4 +65,42 @@ class Mymodel extends CI_Model
         $this->db->where('id_alternatif', $id_alternatif);
         $this->db->delete('tab_alternatif');
     }
+
+    // POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN POIN 
+    public function GetDataPoin()
+    {
+        return $this->db->get('tab_poin')->result_array();
+    }
+    public function proses_tambah_poin()
+    {
+        $data = [
+            "nama_alternatif" => $this->input->post('nama_alternatif'),
+            "nama_kriteria" => $this->input->post('nama_kriteria'),
+            "poin" => $this->input->post('poin')
+        ];
+
+        $this->db->insert('tab_poin', $data);
+    }
+    public function hapus_data_poin($id_poin)
+    {
+        $this->db->where('id_poin', $id_poin);
+        $this->db->delete('tab_poin');
+    }
+
+    public function AmbilPoin()
+    {
+        $this->db->select('tab_alternatif.nama_alternatif, tab_kriteria.nama_kriteria, tab_poin.poin ');
+        $this->db->from('tab_poin');
+        $this->db->join('tab_alternatif', 'tab_alternatif.id_alternatif = tab_poin.id_alternatif');
+        $this->db->join('tab_kriteria', 'tab_kriteria.id_kriteria = tab_poin.id_kriteria');
+        $query = $this->db->get();
+        if($query->num_rows() != 0)
+        {
+            return $query->result_array();
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
