@@ -9,26 +9,30 @@
             <div class="page-content">
                 <?php echo validation_errors(); ?>
                 <form method="post" action="<?php echo base_url('kriteria/proses_tambah_data') ?>">
-                    <div class="form-group row">
-                        <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nama_kriteria" placeholder="Masukkan Kriteria...">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="type" class="col-sm-2 col-form-label">Type</label>
+                <div class="form-group row">
+                        <label for="type" class="col-sm-2 col-form-label">Alternatif</label>
                         <div class="col-sm-5">
                             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="type">
-                                <option value="" selected hidden>Pilih Tipe</option>
+                                <option value="" selected hidden>Pilih Alternatif</option>
                                 <option value="cost">Cost</option>
                                 <option value="benefit">Benefit</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="bobot" class="col-sm-2 col-form-label">Bobot</label>
+                        <label for="type" class="col-sm-2 col-form-label">Kriteria</label>
                         <div class="col-sm-5">
-                            <input type="number" class="form-control" name="bobot" placeholder="Masukkan Bobot...">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="type">
+                                <option value="" selected hidden>Pilih Kriteria</option>
+                                <option value="cost">Cost</option>
+                                <option value="benefit">Benefit</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bobot" class="col-sm-2 col-form-label">Poin</label>
+                        <div class="col-sm-5">
+                            <input type="number" class="form-control" name="poin" placeholder="Masukkan Poin...">
                         </div>
                     </div>
                     <div class="form-group row">
