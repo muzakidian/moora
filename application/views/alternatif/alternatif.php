@@ -41,11 +41,11 @@
                                             foreach ($tab_alternatif as $alt) : ?>
                                                 <tr>
                                                     <td><?php echo $id++; ?></td>
-                                                    <td><?php echo $alt['nama_alternatif']; ?></td>
+                                                    <td><?php echo $alt->nama_alternatif;  ?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url() ?>alternatif/edit_data_alt/<?php echo $alt['id_alternatif']; ?>" class="badge badge-primary"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
-                                                        <a href="<?php echo base_url() ?>alternatif/hapus_data_alt/<?php echo $alt['id_alternatif']; ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
-                                                    </td>
+                                                        <a href="<?php echo base_url() ?>alternatif/edit_data_alt/<?php echo $alt->id_alternatif;  ?>?>" class="badge badge-primary"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
+                                                        <a href="<?php echo base_url() ?>alternatif/hapus_data_alt/<?php echo $alt->id_alternatif;  ?>?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
+                                                        </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>

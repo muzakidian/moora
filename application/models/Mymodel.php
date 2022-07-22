@@ -5,7 +5,8 @@ class Mymodel extends CI_Model
 {
     public function GetData()
     {
-        return $this->db->get('tab_kriteria')->result_array();
+        $query = $this->db->get('tab_kriteria');
+        return $query->result();
     }
 
 
@@ -49,7 +50,8 @@ class Mymodel extends CI_Model
 
     public function GetDataAlt()
     {
-        return $this->db->get('tab_alternatif')->result_array();
+        $query = $this->db->get('tab_alternatif');
+        return $query->result();
     }
     public function proses_tambah_alt()
     {
@@ -70,8 +72,8 @@ class Mymodel extends CI_Model
     public function proses_tambah_poin()
     {
         $data = [
-            "nama_alternatif" => $this->input->post('nama_alternatif'),
-            "nama_kriteria" => $this->input->post('nama_kriteria'),
+            "id_alternatif" => $this->input->post('id_alternatif'),
+            "id_kriteria" => $this->input->post('id_kriteria'),
             "poin" => $this->input->post('poin')
         ];
 
@@ -111,4 +113,5 @@ class Mymodel extends CI_Model
         return $query->result ();
 
     }
+
 }

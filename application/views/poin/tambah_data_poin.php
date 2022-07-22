@@ -1,31 +1,29 @@
 <body class="sidebar-dark">
     <div class="main-wrapper">
-
-
-
         <div class="page-wrapper">
-
-
             <div class="page-content">
                 <?php echo validation_errors(); ?>
-                <form method="post" action="<?php echo base_url('kriteria/proses_tambah_data') ?>">
-                <div class="form-group row">
+            
+                <form method="post" action="<?php echo base_url('poin/proses_tambah_data_poin') ?>">
+                    <div class="form-group row">
                         <label for="type" class="col-sm-2 col-form-label">Alternatif</label>
                         <div class="col-sm-5">
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="type">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="id_alternatif">
                                 <option value="" selected hidden>Pilih Alternatif</option>
-                                <option value="cost">Cost</option>
-                                <option value="benefit">Benefit</option>
+                                <?php foreach ($tab_alternatif as $alt) { ?>
+                                    <option value="<?php echo $alt->id_alternatif; ?>"><?php echo $alt->nama_alternatif; ?> </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="type" class="col-sm-2 col-form-label">Kriteria</label>
                         <div class="col-sm-5">
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="type">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="id_kriteria">
                                 <option value="" selected hidden>Pilih Kriteria</option>
-                                <option value="cost">Cost</option>
-                                <option value="benefit">Benefit</option>
+                                <?php foreach ($tab_kriteria as $krit) { ?>
+                                    <option value="<?php echo $krit->id_kriteria; ?>"><?php echo $krit->nama_kriteria; ?> </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
