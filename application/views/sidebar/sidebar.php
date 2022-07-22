@@ -35,7 +35,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
+          <a href="<?php echo base_url() ?>hasil/hasil" class="nav-link">
               <i class="link-icon" data-feather="layout"></i>
               <span class="link-title">Hasil Perhitungan</span>
             </a>

@@ -114,4 +114,10 @@ class Mymodel extends CI_Model
 
     }
 
+    public function GetDataHasil()
+    {
+        $query = $this->db->get('tab_hasil');
+        return $query->result();
+    }
+
 }
