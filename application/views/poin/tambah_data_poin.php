@@ -2,7 +2,6 @@
     <div class="main-wrapper">
         <div class="page-wrapper">
             <div class="page-content">
-                <?php echo validation_errors(); ?>
             
                 <form method="post" action="<?php echo base_url('poin/proses_tambah_data_poin') ?>">
                     <div class="form-group row">
@@ -14,10 +13,11 @@
                                     <option value="<?php echo $alt->id_alternatif; ?>"><?php echo $alt->nama_alternatif; ?> </option>
                                 <?php } ?>
                             </select>
+                            <?php echo form_error('id_alternatif', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="type" class="col-sm-2 col-form-label">Kriteria</label>
+                        <label for="id_kriteria" class="col-sm-2 col-form-label">Kriteria</label>
                         <div class="col-sm-5">
                             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="id_kriteria">
                                 <option value="" selected hidden>Pilih Kriteria</option>
@@ -25,12 +25,14 @@
                                     <option value="<?php echo $krit->id_kriteria; ?>"><?php echo $krit->nama_kriteria; ?> </option>
                                 <?php } ?>
                             </select>
+                            <?php echo form_error('id_kriteria', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="bobot" class="col-sm-2 col-form-label">Poin</label>
+                        <label for="poin" class="col-sm-2 col-form-label">Poin</label>
                         <div class="col-sm-5">
                             <input type="number" class="form-control" name="poin" placeholder="Masukkan Poin...">
+                            <?php echo form_error('poin', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="form-group row">

@@ -47,7 +47,7 @@
                                                     <td><?php echo $krit->type; ?></td>
                                                     <td><?php echo $krit->bobot; ?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url() ?>kriteria/edit_data/<?php echo $krit->id_kriteria;  ?>" class="badge badge-primary"> <i  data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
+                                                        <a href="<?php echo base_url() ?>kriteria/edit_data/<?php echo $krit->id_kriteria;  ?>" class="badge badge-primary"> <i data-feather="edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;
                                                         <a href="<?php echo base_url() ?>kriteria/hapus_data/<?php echo $krit->id_kriteria;  ?>" class="badge badge-danger"> <i data-feather="delete"></i> Hapus</a>
                                                     </td>
                                                 </tr>

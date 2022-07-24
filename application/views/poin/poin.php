@@ -30,7 +30,7 @@
                                     <table id="dataTableExample" class="table">
                                         <thead>
                                             <tr>
-                                                <th>Id</th>
+                                                <th>No</th>
                                                 <th>Alternatif</th>
                                                 <th>Kriteria</th>
                                                 <th>Poin</th>

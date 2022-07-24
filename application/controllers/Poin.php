@@ -37,6 +37,8 @@ class Poin extends CI_Controller
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->form_validation->set_rules('poin', 'Nama poin', 'required');
+        $this->form_validation->set_rules('id_alternatif', 'Nama Alternatif', 'required');
+        $this->form_validation->set_rules('id_kriteria', 'Nama Kriteria', 'required');
         $data['tab_poin'] = $this->Mymodel->GetDataPoin();
         $data['tab_kriteria'] = $this->Mymodel->GetData();
         $data['tab_alternatif'] = $this->Mymodel->GetDataAlt();

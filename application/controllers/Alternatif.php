@@ -24,7 +24,7 @@ class Alternatif extends CI_Controller
     {
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('nama_alternatif', 'Nama Alternatif', 'required');
+        $this->form_validation->set_rules('nama_alternatif', 'Nama Alternatif', 'trim|required');
         if ($this->form_validation->run() == FALSE) {
             $data['tab_alternatif'] = $this->Mymodel->GetDataAlt();
             $this->load->view('header/header');
@@ -33,6 +33,7 @@ class Alternatif extends CI_Controller
             $this->load->view('footer/footer');
         } else {
             $this->Mymodel->proses_tambah_alt();
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, data berhasil <b>ditambahkan</b>!</div>');
             redirect('alternatif/alternatif');
         }
     }
