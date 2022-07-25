@@ -13,6 +13,7 @@ class Poin extends CI_Controller
         $data = array();
         $data['tab_poin'] = $this->Mymodel->GetDataPoin();
         $data['tab_alternatif'] = $this->Mymodel->GetDataAlt();
+        $data['tab_kriteria'] = $this->Mymodel->GetData();
         $this->load->view('header/header');
         $this->load->view('sidebar/sidebar');
         $this->load->view('poin/poin', $data);

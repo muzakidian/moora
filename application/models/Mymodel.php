@@ -120,4 +120,25 @@ class Mymodel extends CI_Model
         return $query->result();
     }
 
+    public function normalisasi_nilai($id_kriteria) // optimasi nilai
+    {
+        $query = $this->db->query('tab_poin')->select("SELECT SQRT(SUM(POWER(poin, 2))) AS nilai_pembagian FROM tab_poin WHERE id_point='$id_kriteria';");
+        
+        return $query->result();
+    }
+    public function win()
+    {
+        $query = $this->db->table('tab_poin')->select('SELECT poin FROM tab_poin')->get();
+        return $query->result();
+        $query = $this->db->get('tab_kriteria');
+        return $query->result();
+    }
+
+    public function coba()
+    {
+        $query = $this->db->select_sum('poin');
+        $query = $this->db->get('tab_poin');
+        return $query->result();
+    }
+    
 }
