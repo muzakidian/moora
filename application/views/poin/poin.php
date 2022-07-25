@@ -55,27 +55,6 @@
                                         </tbody>
                                     </table>
 
-                                    <table id="dataTableExample" class="table">
-                                        <thead>
-                                        </tr>
-                                        <td>NO</td>
-                                        <?php
-                                            foreach ($tab_alternatif as $poin) : ?>
-                                                    
-                                                    <td><?php echo $poin->nama_alternatif ?></td>
-                                            <?php endforeach; ?>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            foreach ($tab_kriteria  as $poin)  : ?>
-                                                <tr>
-                                                    <td><?php echo $poin->nama_kriteria ?></td>
-                                                </tr>
-                                            <?php endforeach; ?>
-                                            
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>
