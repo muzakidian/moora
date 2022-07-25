@@ -35,7 +35,7 @@
           </li>
 
           <li class="nav-item">
-          <a href="<?php echo base_url() ?>hasil/hasil" class="nav-link">
+          <a href="<?php echo base_url() ?>metode/metode" class="nav-link">
               <i class="link-icon" data-feather="layout"></i>
               <span class="link-title">Hasil Perhitungan</span>
             </a>

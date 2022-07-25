@@ -204,7 +204,7 @@
 						<?php foreach ($sorted_rank_data as $key => $value) : ?>
 							<tr>
 								<td><?php echo $no++; ?></td>
-								<td><?php echo "A" . $key; ?></td>
+								<td><?php echo "A" . $value['id_alternatif']; ?></td>
 								<td><?php echo $value['value']; ?></td>
 								<td><?php echo $value['rank']; ?></td>
 							</tr>
