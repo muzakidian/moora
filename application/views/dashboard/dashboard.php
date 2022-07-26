@@ -64,7 +64,7 @@
 
         <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
           <div>
-            <h4 class="mb-3 mb-md-0">Welcome to Dashboard Sistem Pendukung Keputusan</h4>
+            <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
           </div>
           <div class="d-flex align-items-center flex-wrap text-nowrap">
             <div class="input-group date datepicker dashboard-date mr-2 mb-2 mb-md-0 d-md-none d-xl-flex" id="dashboardDate">
@@ -100,56 +100,71 @@
               <!-- ======== Start Slider ======== -->
               <section class="slider" id="slider">
                 <div class="slider-content text-left">
-          
+
                   <h3 class="cd-headline clip is-full-width">
                     <span class="cd-words-wrapper">
-                        <b class="is-visible">Sistem Pendukung Keputusan</b><br/>
-                        <b>Metode Multi Objective Optimization by Ratio Analysis</b>
-                        
-                    </span>
-                </h3>
+                      <b class="is-visible">Sistem Pendukung Keputusan</b><br />
+                      Metode Multi Objective Optimization by Ratio Analysis
 
-                  <p>Metode MOORA memiliki tingkat selektifitas yang baik karena dapat
+                    </span>
+                  </h3>
+                  <br />
+                  <p> Pada Website Sistem Pendukung Keputusan ini menggunakan metode Multi-Objective Optimization On The Basis Of Ratio Analysis (MOORA) yang akan menghasilkan rekomendasi berdasarkan nilai alternatif yang terbesar hingga terkecil, dengan Framework PHP Codeigniter 3 dan database MySQL.
+                    Metode MOORA memiliki tingkat selektifitas yang baik karena dapat
                     menentukan tujuan dari kriteria yang bertentangan.
-                    <br>
+
                     Dimana kriteria dapat bernilai menguntungkan (benefit) atau yang tidak
                     menguntungkan (cost).
                   </p>
 
-                  <div class="buttons">
-                    <a href="<?php echo base_url() ?>welcome/dashboard" class="btn-1">Get Started</a>
-
-                  </div>
 
                 </div>
               </section>
-              <div class="card           container-md">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="<?php echo base_url() ?>Kriteria/kriteria" class="btn btn-primary">Halaman Data Kriteria</a>
-                  
+              <br /><br />
+              
+              <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="card bg-light">
+                  <div class="card-body">
+                    <h5 class="card-title">KRITERIA</h5>
+                    <p class="card-text">Menambahkan Data Kriteria MOORA.        </p>
+                    <a href="<?php echo base_url() ?>Kriteria/kriteria" class="btn btn-primary">+ Data Kriteria</a>
+                  </div>
                 </div>
-              </div>
-<br/>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="<?php echo base_url() ?>Alternatif/alternatif" class="btn btn-">Halaman Data Alternatif</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="card bg-light">
+                  <div class="card-body">
+                    <h5 class="card-title">ALTERNATIF</h5>
+                    <p class="card-text">Menambahkan Data Alternatif MOORA.</p>
+                    <a href="<?php echo base_url() ?>Alternatif/alternatif" class="btn btn-success">+ Data Alternatif</a>
+                  </div>
                 </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="card bg-light">
+                  <div class="card-body">
+                    <h5 class="card-title">TABEL POIN</h5>
+                    <p class="card-text">Menambahkan Data Tabel Poin MOORA.</p>
+                    <a href="<?php echo base_url() ?>Poin/Poin" class="btn btn-warning">+ Tabel Poin</a>
+                  </div>
+                
               </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="card bg-light">
+                    <div class="card-body">
+                      <h5 class="card-title">PERHITUNGAN</h5>
+                      <p class="card-text">Hasil dari Perhitungan Metode MOORA.</p>
+                      <a href="<?php echo base_url() ?>metode/metode" class="btn btn-danger">= Perhitungan</a>
+                    </div>
+                </div>
           </div>
         </div>
-
       </div>
 
-      <!-- partial:partials/_footer.html -->
-
-      <!-- partial -->
     </div>
+
+    <!-- partial:partials/_footer.html -->
+
+    <!-- partial -->
+  </div>
   </div>
 
   <!-- core:js -->
