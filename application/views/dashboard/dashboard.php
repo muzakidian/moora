@@ -144,8 +144,7 @@
                     <h5 class="card-title">TABEL POIN</h5>
                     <p class="card-text">Menambahkan Data Tabel Poin MOORA.</p>
                     <a href="<?php echo base_url() ?>Poin/Poin" class="btn btn-warning">+ Tabel Poin</a>
-                  </div>
-                
+                  </div>     
               </div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <div class="card bg-light">

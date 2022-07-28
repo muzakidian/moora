@@ -5,7 +5,7 @@
 
             <div class="page-content">
                 <?php echo validation_errors(); ?>
-                <form method="post" action="<?php echo base_url('welcome/proses_edit_data') ?>">
+                <form method="post" action="<?php echo base_url('kriteria/proses_edit_data') ?>">
                   
                 <input type="hidden" name="tab_kriteria" value="<?php echo $tab_kriteria['id_kriteria'];?>">
 

@@ -45,19 +45,19 @@ class Kriteria extends CI_Controller
     }
 
     //EDIT DATA
-    public function edit_dataKriteria()
+    public function edit_data($id_kriteria)
     {
-    	$data['tab_kriteria'] = $this->Mymodel->ambil_data_kriteria();
+    	$data['tab_kriteria'] = $this->Mymodel->ambil_id_kriteria($id_kriteria);
     	$this->load->view('header/header');
-    	$this->load->view('sidebar/sidebar');
-    	$this->load->view('edit_dataKriteria' ,$data);
+    	// $this->load->view('sidebar/sidebar');
+    	$this->load->view('kriteria/edit_data' ,$data);
     	$this->load->view('footer/footer');
     }
 
     //PROSES EDIT
-    public function proses_edit_dataKriteria()
+    public function proses_edit_data($id_kriteria)
     {
-    	$this->Mymodel->proses_edit_dataKriteria();
+    	$this->Mymodel->proses_edit_data($id_kriteria);
     	redirect('kriteria/kriteria');
     }
 
