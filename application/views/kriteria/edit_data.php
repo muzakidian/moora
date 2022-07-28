@@ -31,7 +31,7 @@
                         <label for="bobot" class="col-sm-2 col-form-label">Bobot</label>
                         <div class="col-sm-5">
                             <input type="number" class="form-control" name="bobot" 
-                            required="" value="<?php echo $tab_kriteria['bobot'];?>">>
+                            required="" value="<?php echo $tab_kriteria['bobot'];?>">
                         </div>
                     </div>
                     <div class="form-group row">

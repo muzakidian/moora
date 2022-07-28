@@ -30,10 +30,12 @@ class Mymodel extends CI_Model
 
     public function ambil_id_kriteria($id_kriteria)
     {
-        return $this->db->get_where('tab_kriteria',['id_kriteria' => $id_kriteria])->result_array();
+        // return $this->db->get_where('tab_kriteria',['id_kriteria' => $id_kriteria])->result_array();
+        $query = $this->db->query("SELECT * FROM tab_kriteria WHERE id_kriteria = '$id_kriteria'");
+        return $query->row_array();
     }
 
-    public function proses_edit_data()
+    public function proses_edit_data($id_kriteria)
     {
         $data = [
             "nama_kriteria" => $this->input->post('nama_kriteria'),
@@ -43,6 +45,10 @@ class Mymodel extends CI_Model
 
         $this->db->where('id_kriteria', $this->input->post('id_kriteria'));
         $this->db->update('tab_kriteria', $data);
+        
+        // $this->db->set($data);
+        // $this->db->where('id_kriteria', $id_kriteria);
+        // $this->db->update('tab_kriteria', $data);
     }
 
 
@@ -104,14 +110,13 @@ class Mymodel extends CI_Model
 
     public function GetDataPoin()
     {
-        $this->db->select ( 'tab_alternatif.nama_alternatif, tab_kriteria.nama_kriteria, tab_poin.poin ,tab_poin.id_point ' ); 
-        $this->db->from ( 'tab_poin' );
-        $this->db->join ( 'tab_alternatif', 'tab_poin.id_alternatif = tab_alternatif.id_alternatif' , 'left' );
-        $this->db->join ( 'tab_kriteria', 'tab_poin.id_kriteria = tab_kriteria.id_kriteria' , 'left' );
-        $query = $this->db->get ();
-        
-        return $query->result ();
+        $this->db->select('tab_alternatif.nama_alternatif, tab_kriteria.nama_kriteria, tab_poin.poin ,tab_poin.id_point ');
+        $this->db->from('tab_poin');
+        $this->db->join('tab_alternatif', 'tab_poin.id_alternatif = tab_alternatif.id_alternatif', 'left');
+        $this->db->join('tab_kriteria', 'tab_poin.id_kriteria = tab_kriteria.id_kriteria', 'left');
+        $query = $this->db->get();
 
+        return $query->result();
     }
 
     public function GetDataHasil()
@@ -123,7 +128,7 @@ class Mymodel extends CI_Model
     public function normalisasi_nilai($id_kriteria) // optimasi nilai
     {
         $query = $this->db->query('tab_poin')->select("SELECT SQRT(SUM(POWER(poin, 2))) AS nilai_pembagian FROM tab_poin WHERE id_point='$id_kriteria';");
-        
+
         return $query->result();
     }
     public function win()
@@ -140,5 +145,4 @@ class Mymodel extends CI_Model
         $query = $this->db->get('tab_poin');
         return $query->result();
     }
-    
 }

@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Kriteria extends CI_Controller
 {
+    public function __construct(){
+        parent::__construct();
+        $this->load->model('Mymodel');
+    }
+
     public function kriteria()
     {
         $data['tab_kriteria'] = $this->Mymodel->GetData();
@@ -47,13 +52,14 @@ class Kriteria extends CI_Controller
     //EDIT DATA
     public function edit_data($id_kriteria)
     {
+        $data = array();
     	$data['tab_kriteria'] = $this->Mymodel->ambil_id_kriteria($id_kriteria);
     	$this->load->view('header/header');
-    	// $this->load->view('sidebar/sidebar');
+    	$this->load->view('sidebar/sidebar');
     	$this->load->view('kriteria/edit_data' ,$data);
     	$this->load->view('footer/footer');
     }
-
+ 
     //PROSES EDIT
     public function proses_edit_data($id_kriteria)
     {
