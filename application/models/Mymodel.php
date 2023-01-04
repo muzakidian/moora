@@ -34,6 +34,11 @@ class Mymodel extends CI_Model
         $query = $this->db->query("SELECT * FROM tab_kriteria WHERE id_kriteria = '$id_kriteria'");
         return $query->row_array();
     }
+    public function ambil_id_alternatif($id_alternatif)
+    {
+        $query = $this->db->query("SELECT * FROM tab_alternatif WHERE id_alternatif = '$id_alternatif'");
+        return $query->row_array();
+    }
 
     public function proses_edit_data($id_kriteria)
     {
@@ -45,6 +50,19 @@ class Mymodel extends CI_Model
 
         $this->db->where('id_kriteria', $this->input->post('id_kriteria'));
         $this->db->update('tab_kriteria', $data);
+        
+        // $this->db->set($data);
+        // $this->db->where('id_kriteria', $id_kriteria);
+        // $this->db->update('tab_kriteria', $data);
+    }
+    public function proses_edit_data_alt($id_alternatif)
+    {
+        $data = [
+            "nama_alternatif" => $this->input->post('nama_alternatif'),
+        ];
+
+        $this->db->where('id_alternatif', $this->input->post('id_alternatif'));
+        $this->db->update('tab_alternatif', $data);
         
         // $this->db->set($data);
         // $this->db->where('id_kriteria', $id_kriteria);

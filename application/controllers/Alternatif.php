@@ -38,6 +38,22 @@ class Alternatif extends CI_Controller
         }
     }
 
+    public function edit_data_alt($id_alternatif)
+    {
+        $data = array();
+    	$data['tab_alternatif'] = $this->Mymodel->ambil_id_alternatif($id_alternatif);
+    	$this->load->view('header/header');
+    	$this->load->view('sidebar/sidebar');
+    	$this->load->view('alternatif/edit_data_alt' ,$data);
+    	$this->load->view('footer/footer');
+    }
+
+    public function proses_edit_data_alt($id_alternatif)
+    {
+    	$this->Mymodel->proses_edit_data_alt($id_alternatif);
+    	redirect('alternatif/alternatif');
+    }
+
     public function hapus_data_alt($id_alternatif)
     {
         $this->Mymodel->hapus_data_alt($id_alternatif);
